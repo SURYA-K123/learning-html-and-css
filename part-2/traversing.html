@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        border: 2px solid black;
+    }
+    .main-parent{
+        height: 700px;
+        width: 700px;
+    }
+    .parent-l1{
+        height: 600px;
+        width: 600px;
+        margin: 10px auto;
+    }
+    .parent-l2, .sibling1, .sibling2, .sibling3, .sibling4{
+        height: 100px;
+        width: 100px;
+        margin: 10px auto;
+    }
+    .child-l1{
+        height: 70px;
+        width: 70px;
+        margin: 10px auto;
+    }
+    .child-l2{
+        height: 50px;
+        width: 50px;
+        margin:10px auto;
+    }
+</style>
+<body>
+    <div class="main-parent">
+        <div class="parent-l1">
+            <div class="parent-l2">
+                <div class="child-l1">
+                    <div class="child-l2"></div>
+                </div>
+            </div>
+            <div class="sibling1"></div>
+            <div class="sibling2"></div>
+            <div class="sibling3"></div>
+            <div class="sibling4"></div>
+        </div>
+    </div>
+
+    <p>Hi <span class="helloSpan">Hello</span> <i>Abc</i></p>
+    <p>Not selected for has method <i>hello</i></p>
+
+    <button id="parent">parent</button>
+    <button id="parents">parents</button>
+    <button id="parentsUntil">parentsUntil</button>
+    <button id="children">children</button>
+    <button id="find">find</button>
+    <button id="siblings">siblings</button>
+    <button id="next">next</button>
+    <button id="nextAll">nextAll</button>
+    <button id="nextUntil">nextUntil</button>
+    <button id="prev">prev</button>
+    <button id="prevAll">prevAll</button>
+    <button id="prevUntil">prevUntil</button>
+    <button id="closest">closest</button>
+    <button id="offsetParent">offsetParent</button>
+
+    <button id="first">first</button>
+    <button id="last">last</button>
+    <button id="eq">eq</button>
+    <button id="filter">filter</button>
+    <button id="not">not</button>
+    <button class="is">is</button>
+    <button id="has">has</button>
+    <button id="map">map</button>
+    <!-- <div class="is">click</div> -->
+
+    <button id="add">add</button>
+    <button id="andSelf">andSelf</button>
+    <button id="contents">contents <!-- comment--></button>
+    <button id="end">end</button>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./traversing.js"></script>
+</body>
+</html>

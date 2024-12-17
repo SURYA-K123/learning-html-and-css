@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+    }
+
+    .content {
+        height: 200px;
+        width: 400px;
+        border-top: none;
+        margin: auto;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+        border-radius: 0 0 10px 10px;
+        display: none;
+        text-align: justify;
+        padding: 10px 15px 10px 15px;
+        box-sizing: border-box;
+        overflow: auto;
+    }
+
+    a {
+        display: block;
+        height: 30px;
+        width: 100px;
+        margin: 0 auto;
+        text-align: center;
+        border: 1px solid #dedede;
+        border-top: 0;
+        text-transform: uppercase;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 0 0 5px 5px;
+        background: linear-gradient(#fff, #f4f5f4);
+    }
+</style>
+
+<body>
+    <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat laborum repudiandae,
+        excepturi modi assumenda hic veritatis quibusdam adipisci. Earum debitis fuga minima, non neque amet distinctio
+        dicta culpa esse ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero repudiandae
+        dolor impedit ducimus id alias labore odio officia quam corporis quas veritatis commodi, unde, accusamus optio
+        qui eius a! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum obcaecati soluta aspernatur
+        consectetur nesciunt? Nostrum quisquam, molestias veritatis velit hic numquam deleniti blanditiis nulla, rerum
+        dolore neque perspiciatis cupiditate praesentium! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Sapiente omnis neque iste excepturi ad asperiores? Totam eveniet impedit ratione labore ipsam necessitatibus
+        repellendus ipsa inventore? Quam doloremque saepe repellat consectetur! Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. At dolore, voluptatem cupiditate iste eveniet quod quo qui quidem deleniti illo aperiam
+        inventore alias necessitatibus eaque temporibus voluptates, est quae reiciendis.</div>
+    <a>open</a>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("a").on("click", function () {
+                if ($("div").is(":visible")) {
+                    $("div").slideUp(800, function () {
+                        $("a").text("open")
+                    });
+                }
+                else {
+                    $("div").slideDown(800, function () {
+                        $("a").text("close")
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

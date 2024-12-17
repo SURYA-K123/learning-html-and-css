@@ -1,0 +1,57 @@
+<html lang="en">
+    <!-- // I have completed learning the Contents provided in the link and gone through discussion for every topics. I am waiting for the next set of topics from you anna -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Tags Example</title>
+</head>
+
+<body>
+    <form action="/post" method="post">
+        <label for="color">Color:</label>
+        <input type="color" id="color" name="color"><br><br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date"><br><br>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="month">Month:</label>
+        <input type="month" id="month" name="month"><br><br>
+
+        <label for="number">Number:</label>
+        <input type="number" id="number" name="number" min="40" max="56"><br><br>
+
+        <label for="range">Range:</label>
+        <input type="range" id="range" name="range" min="0" max="100"><br><br>
+
+        <label for="search">Search:</label>
+        <input type="search" id="search" name="search"><br><br>
+
+        <label for="tel">Telephone:</label>
+        <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br><br>
+
+        <label for="url">URL:</label>
+        <input type="url" id="url" name="url"><br><br>
+
+        <label for="week">Week:</label>
+        <input type="week" id="week" name="week"><br><br>
+
+        <label for="file">File:</label>
+        <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        var range = document.getElementById("range");
+        range.addEventListener("change", function () {
+            console.log(range.value);
+        });
+    </script>
+</body>
+
+</html>

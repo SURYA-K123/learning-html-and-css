@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning Task</title>
+</head>
+<style>
+    body{
+        height: 200vh;
+    }
+    div{
+        border: 2px dashed blue;
+        height: 70px;
+        width: 300px;
+    }
+    .three{
+        height:120px;
+        width: 350px;
+        position: relative;
+    }
+    .two{
+        position: relative;
+        left: 30px;
+        top: 25px;
+    }
+    .three-one{
+        position: absolute;
+        bottom: 3px;
+        left: 3px;
+    }
+    .three-two{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    .four{
+        margin-top: 10px;
+        position: sticky;
+        top: 10px;
+    }
+    .footer{
+        position: fixed;
+        bottom: 5px;
+        left: 5px;
+    }
+</style>
+<body>
+    <div class="one">1</div>
+    <div class="two">2</div>
+    <div class="three">3
+        <div class="three-one">3.1</div>
+        <div class="three-two">3.2</div>
+    </div>
+    <div class="four">4</div>
+    <div class="footer">footer</div>
+</body>
+</html>

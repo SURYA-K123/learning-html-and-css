@@ -1,0 +1,126 @@
+* {
+  width: 46px;
+  width: 34px;
+  width: 240px;
+  width: 4px; }
+
+.division {
+  width: 100px/10;
+  width: 10px;
+  width: 1rem;
+  width: -5px; }
+
+.built-in-fn {
+  width: 250%;
+  width: 3px;
+  width: 3px;
+  width: 2px;
+  width: 2.5px; }
+
+.color {
+  color: rgba(142, 198, 63, 0.75);
+  color: #f4ffa5;
+  color: #ffff7e;
+  color: rgba(1, 1, 0, 0.75); }
+
+div {
+  color: blue;
+  background-color: red; }
+  div span {
+    font-family: "Roboto";
+    font-weight: bold; }
+
+.container {
+  color: green; }
+  @media all and (max-width: 300px) {
+    .container {
+      color: blue; } }
+
+a {
+  color: black; }
+  a:hover {
+    color: green; }
+
+a {
+  color: black; }
+  .cont a {
+    color: green; }
+
+p {
+  font-size: 2rem; }
+
+.var {
+  left: 20px; }
+
+.alterations {
+  color: #7139c0;
+  color: #773fc6;
+  color: #c7e39f;
+  color: #f4f9ec;
+  color: #838383; }
+
+.alert-error, .alert-notification, .btn-primary {
+  border-radius: 10px;
+  padding: 10px 20px; }
+
+.alert-error {
+  background: #f2dede;
+  color: #b94a48; }
+
+.alert-notification {
+  background: #f2dede;
+  color: #b94a48; }
+
+#main-heading, .sub-heading {
+  color: #9c6; }
+  #main-heading span, .sub-heading span {
+    text-decoration: underline; }
+
+.btn {
+  color: #ff3452; }
+  .btn:hover {
+    color: #23423a; }
+
+.shadows {
+  box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5, inset 0 0 5px #cecfd5; }
+
+.btn-primary {
+  color: #fff; }
+  .btn-primary:hover {
+    color: #9799a7; }
+
+.box {
+  background: red; }
+
+.col-1 {
+  width: 31px; }
+
+.col-2 {
+  width: 32px; }
+
+.col-3 {
+  width: 33px; }
+
+.apple-logo {
+  background: url("/img/apple.jpg"); }
+
+.mango-logo {
+  background: url("/img/mango.jpg"); }
+
+h1 {
+  font-size: 1.75em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.25em; }
+
+h4 {
+  font-size: 1em; }
+
+h5 {
+  font-size: 0.75em; }
+
+h6 {
+  font-size: 0.5em; }

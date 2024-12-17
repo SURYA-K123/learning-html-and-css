@@ -1,0 +1,36 @@
+@mixin btn($color: #fff, $color-hover: #9799a7)
+  color: $color
+  &:hover
+    color: $color-hover
+
+.btn-primary
+  @extend %alert
+  +btn($color-hover: #9799a7)
+
+
+$name : shy
+
+.box
+    @if $name == shay
+        background : blue
+
+    @else if $name == shy
+        background: red
+
+    @else
+        background: green
+
+
+@for $col from 1 to 4
+    .col-#{$col}
+        width : 30px + $col
+
+@each $class in apple, mango
+    .#{$class}-logo
+        background : url("/img/#{$class}.jpg")
+
+$heading: 1
+@while $heading <= 6
+  h#{$heading}
+    font-size: 2em - ($heading * .25em)
+  $heading: $heading + 1

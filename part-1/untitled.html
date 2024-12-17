@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample page</title>
+</head>
+<style>
+    html,
+    body {
+        margin: 0;
+        height: 100%;
+    }
+
+    header {
+        height: 70px;
+        width: 100%;
+        background-color: rgb(132, 0, 255);
+    }
+
+    main {
+        height: calc(100% - 70px);
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+    }
+
+    aside {
+        height: 100%;
+        width: 0;
+        background-color: red;
+        overflow-y: hidden;
+        transition: all linear 0.3s;
+    }
+
+    section {
+        flex: 1;
+        overflow: auto;
+    }
+    li{
+        width: 200px;
+    }
+</style>
+
+<body>
+    <header><button id="nav"> toggle </button></header>
+    <main>
+        <aside>
+            <ul>
+                <li>apple fruit</li>
+                <li>apple fruit</li>
+                <li>apple fruit</li>
+                <li>apple fruit</li>
+            </ul>
+        </aside>
+        <section>
+
+        </section>
+    </main>
+    <script>
+        let btn = document.getElementById("nav");
+        let aside = document.getElementsByTagName("aside")[0];
+        let flag = false;
+        btn.addEventListener("click", function () {
+            if (!flag) {
+                aside.style.width = "200px";
+                flag = !flag;
+            }
+            else {
+                aside.style.width = "0";
+                flag = !flag;
+            }
+        });
+    </script>
+</body>
+
+</html>

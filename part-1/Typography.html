@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+<style>
+    .font-properties p {
+        font-family: 'Poppins';
+        font-size: 2rem;
+        line-height: 60px;
+    }
+
+    .pixel-size {
+        font-size: 20px;
+    }
+
+    span {
+        font-size: 2em;
+        font-style: italic;
+        font-variant: small-caps;
+        font-weight: 900;
+        /* 400-normal  700-bold */
+
+        /* font: italic small-caps bold 14px/22px "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    }
+
+    .text-properties p {
+        text-align: justify;
+        text-decoration: underline wavy;
+        /* shorthand for text-decoration-line, text-decoration-style */
+        text-indent: 30px;
+        text-shadow: -1px -1px 1px red;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+        word-spacing: -3px;
+        height: fit-content;
+        width: 50%;
+        margin: auto;
+    }
+</style>
+
+<body>
+    <div class="font-properties">
+        <h3>Text - properties</h3>
+        <p class="pixel-size">Font size in pixels
+        </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<span>Hello</span> Illo beatae magnam eveniet quos
+            reiciendis voluptatum similique, non eos soluta, incidunt impedit accusamus facere laudantium ipsa! Ut quos
+            consequuntur est officiis?</p>
+    </div>
+    <hr>
+    <h3>Font - properties</h3>
+    <div class="text-properties">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, minima recusandae repudiandae alias iusto
+            nobis soluta enim quasi ut eligendi deleniti ab obcaecati laborum impedit, adipisci, ipsum itaque distinctio
+            ullam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nisi id. Eum porro eveniet maiores
+            nesciunt ducimus ipsam asperiores harum pariatur voluptatem sunt ratione rem non explicabo, ullam
+            repellendus fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae accusamus in quis, esse,
+            sequi neque mollitia inventore nulla ab dolores tempore minima, dolor soluta sapiente ad. Molestias eveniet
+            voluptas sed.</p>
+    </div>
+
+    <div class="including-citations">
+        <h3>Including Citations & Quotes#citations-quotes</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur eligendi quo, nostrum autem dolores
+            voluptatem pariatur deserunt dolore dicta laborum tempora blanditiis tempore ipsam soluta mollitia?
+            Perspiciatis maxime eaque unde! <cite>Hi</cite> <q>hello</q></p>
+        <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident error eum a. Quas, perferendis
+            quisquam laboriosam amet fugit quaerat numquam earum, officiis architecto iusto, nesciunt assumenda eum
+            vitae consequatur in.</blockquote>
+    </div>
+</body>
+
+</html>

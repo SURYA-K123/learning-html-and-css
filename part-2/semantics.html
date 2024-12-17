@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semantics</title>
+</head>
+<style>
+  meter::-webkit-meter-bar {
+    background: lightgray;
+  }
+
+  meter::-webkit-meter-optimum-value {
+    background: green;
+  }
+
+  meter::-webkit-meter-suboptimum-value {
+    background: orange;
+  }
+
+  meter::-webkit-meter-even-less-good-value {
+    background: red;
+  }
+
+  meter {
+    background-color: lightgray;
+    color: green;
+  }
+
+  meter {
+    width: 300px;
+    height: 20px;
+  }
+  #abbr:target{
+    background-color: red;
+  }
+</style>
+
+<body>
+  <h1> Structural semantics</h1>
+  <header>
+    <img src="https://image.png" alt="logo">
+    <nav>
+      <ul>
+        <li>
+          Home
+        </li>
+        <li>about</li>
+      </ul>
+    </nav>
+  </header>
+  <aside>
+    <ul>
+      <li>Contact us</li>
+      <li>About us</li>
+    </ul>
+  </aside>1
+  <h3 hidden>Hidden content</h3> <!--Equivalent to display:none and semantically correct-->
+  <h3>Text level semantics</h3>
+  <p> <strong> caution: </strong> This is the strong text</p>
+  <p>This recipe calls for <b>bacon</b> and <b>baconnaise</b>.</p>
+  <h3>Italizing text</h3>
+  <p>This is the <em>best</em> ever thing in the world</p>
+  <p>I know programming languages like <i>java, python</i></p>
+
+  <h3>Underline</h3>
+  <ins cite="http://learn.shayhowe.com" datetime="2012-07-01">
+    Updated: This website now contains an advanced guide.
+  </ins><br>
+
+  <u>Urushihara Yuuji</u> won <u>Sasuke 27</u>.
+  <h3>Strinking text</h3>
+  I am an avid cyclist, <del cite="http://shayhowe.com" datetime="2012-07-01">skateboarder</del> and designer.
+
+  <s>$24.99</s> $19.99
+
+  <h3>Mark</h3>
+  Search results for <mark>'chicago'</mark>.
+
+  <h3 id="abbr">Abbreviation</h3>
+  <abbr title="HyperText Markup Language">HTML</abbr>
+
+  <h3>Sub and superscripts</h3>
+  H<sub>2</sub>O <br>
+  1<sup>st</sup> Place
+
+
+  <h3>Meter and progress</h3>
+  <meter min="0" value="60" max="105" low="5" high="65" optimum="45"></meter><br>
+  <progress value="50" min="0" max="100">Hold tight, you&#8217;re getting there.</progress>
+
+  <h3>Time and address</h3>
+  <time datetime="2011-08-24T15:00">August 24th, 2011 at 3pm</time>
+  <address>
+    <strong>Shay Howe</strong><br>
+    <a href="http://learn.shayhowe.com">http://learn.shayhowe.com</a><br>
+    <a href="mailto:hello@awesome.com">hello@awesome.com</a><br>
+    600 W. Chicago Ave.<br>
+    Suite 620<br>
+    Chicago, IL 60654<br>
+    USA
+  </address>
+
+  <h3>code tags</h3>
+  Use the <code>article</code> element.
+
+  <pre><code>body {
+  color: #666;
+  font: 14px/20px Arial, sans-serif;
+  }</code></pre>
+
+  <h3>Line and word break</h3>
+  <p>To learn AJAX, you must be familiar with the
+    XML<wbr>Http<wbr>Request Object. To learn AJAX, you must be familiar with the <wbr>XMLHttp<wbr>Request Object.
+  </p>
+
+  <h3>Download</h3>
+  <a href="./download.png" download>download image</a>
+
+  <h3>Relationship attribute</h3>
+  <a href="legal.html" rel="copyright">Terms of Use</a>
+  <a href="toc.html" rel="contents">Table of Contents</a>
+
+  <h3>Microdata</h3>
+  <section itemscope itemtype="http://schema.org/Person">
+    <strong itemprop="name">Surya K</strong><br>
+    <img src="./downloaded.png" alt="photo" itemprop="image"><br>
+    <a href="mailto:surya6067610@gmail.com" itemid="email">surya6067610@gmail.com</a>
+    <address itemprop="address">
+      <pre>
+        Tce, Madurai
+      </pre>
+    </address>
+  </section>
+
+  <ul>
+    <li draggable="true" aria-grabbed="false">Hello i am draggable</li>
+    <li>I am not draggable</li>
+  </ul>
+
+  <a href="#abbr">Go to abbr</a>
+
+</body>
+
+</html>

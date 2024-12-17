@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    label {
+        display: block;
+    }
+</style>
+
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Form</legend>
+            <label for="name">
+                Name: <input type="text" name="name" placeholder="John doe" required />
+            </label>
+            <label for="rollno">
+                Roll no: <input type="number" name="rollno" placeholder="64387" />
+            </label>
+            <label for="department">
+                Department:
+                <select name="department" id="department">
+                    <option value="IT">IT</option>
+                    <option value="CSE">CSE</option>
+                    <option value="EEE">EEE</option>
+                </select>
+            </label>
+            <label for="email">
+                Email:
+                <input type="email" name="email" id="email">
+            </label>
+            <label for="gender">
+                Gender:
+                <input type="radio" name="gender" id="male" value="male" checked>male
+                <input type="radio" name="gender" id="female" value="female" disabled>female
+            </label>
+            <label for="hobbies">
+                Hobbies:
+                <input type="checkbox" name="hobbies" value="singing">Singing
+                <input type="checkbox" name="hobbies" value="reading" checked>Reading
+                <input type="checkbox" name="hobbies" value="writing">Writing
+            </label>
+            <label for="dob">
+                Date of Birth:
+                <input type="date" name="dob" id="dob">
+            </label>
+            <label for="guardian">
+                Guardian Name:
+                <input type="text" name="guardian" id="guardian" disabled>
+            </label>
+            <label for="comments">
+                Comments:
+                <textarea name="comments" id="comments" rows="1" cols="10" placeholder="Enter your comments"
+                    style="vertical-align: middle;"></textarea>
+            </label>
+            <input type="submit" value="Send Data">
+        </fieldset>
+    </form>
+    <!-- <script>
+        var select = document.addEventListener("click", function(){
+            var a = document.getElementById("department");
+            console.log(a);
+        })
+    </script> -->
+</body>
+
+</html>

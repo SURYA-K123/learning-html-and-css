@@ -1,0 +1,137 @@
+$fs: 2rem;
+
+* {
+  width: 40px + 6;
+  width: 40px - 6;
+  width: 40px * 6;
+  width: 40px % 6;
+}
+
+.division {
+  width: 100px / 10;
+  width: (100px / 10);
+  width: $fs / 2;
+  width: 5px - 100 / 10;
+}
+
+.built-in-fn {
+  width: percentage(2.5);
+  width: round(2.5px);
+  width: ceil(2.5px);
+  width: floor(2.5px);
+  width: abs(-2.5px);
+}
+
+.color {
+  color: rgba(142, 198, 63, 0.75);
+  color: #8ec63f + #666;
+  color: #8ec63f * 2;
+  color: rgba(142, 198, 63, 0.75) / rgba(255, 255, 255, 0.75);
+}
+
+div {
+  color: blue;
+  background-color: red;
+
+  span {
+    font: {
+      family: "Roboto";
+      weight: bold;
+    };
+  }
+}
+
+.container {
+  color: green;
+
+  @media all and (max-width: 300px) {
+    color: blue;
+  }
+}
+
+a {
+  color: black;
+
+  &:hover {
+    color: green;
+  }
+}
+
+a {
+  color: black;
+
+  .cont & {
+    color: green;
+  }
+}
+
+p {
+  font-size: $fs;
+}
+
+$s: left;
+
+.var {
+  #{$s}: 20px;
+}
+
+.alterations {
+  color: invert(#8ec63f);
+  color: complement(#8ec63f);
+  color: mix(#8ec63f, #fff);
+  color: mix(#8ec63f, #fff, 10%);
+  color: grayscale(#8ec63f);
+}
+
+%alert {
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.alert-error {
+  @extend %alert;
+
+  background: #f2dede;
+  color: #b94a48;
+}
+
+.alert-notification {
+  @extend %alert;
+
+  background: #f2dede;
+  color: #b94a48;
+}
+
+#main-heading {
+  color: #9c6;
+
+  span {
+    text-decoration: underline;
+  }
+}
+
+.sub-heading {
+  @extend #main-heading;
+}
+
+@mixin btn($color, $color-hover) {
+  color: $color;
+
+  &:hover {
+    color: $color-hover;
+  }
+}
+
+.btn {
+  @include btn($color: #ff3452, $color-hover: #23423a);
+}
+
+@mixin box-shadow($shadow...) {
+  box-shadow: $shadow;
+}
+
+.shadows {
+  @include box-shadow(0 1px 2px #cecfd5, inset 0 0 5px #cecfd5, inset 0 0 5px #cecfd5);
+}
+
+@import "index1";

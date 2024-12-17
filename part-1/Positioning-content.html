@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .img-wrap::after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        img {
+            float: left;
+            margin-right: 15px;
+            max-width: 300px;
+        }
+
+        .float-clear {
+            margin-top: 30px;
+        }
+
+        section {
+            height: 200px;
+            width: 25%;
+            background-color: rgb(72, 218, 96);
+            float: left;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .header,
+        .footer {
+            width: 90%;
+            height: 200px;
+            background-color: rgb(72, 218, 96);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .max-height-box{
+            height: 300px;
+            float: right;
+        }
+
+        .footer{
+            clear: both;
+        }
+        .big-content{
+            height: fit-content;
+        }
+        .positions{
+           margin-top: 30px;
+        }
+
+        .relative, .absolute{
+            height: 500px;
+            width: 50%;
+            background-color: blueviolet;
+        }
+
+        .relative div, .absolute div{
+            height: 100px;
+            width: 100px;
+            background-color: aquamarine;
+            margin: 10px;
+        }
+        .relative .box2{
+            background-color: red;
+            position: relative;
+            top: 30px;
+            left: 10px;
+        }
+        .absolute{
+            position: relative;
+        }
+        .absolute .box3{
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 10%;
+        }
+        .fixed{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            height: 100px;
+            width: 100px;
+            background-color: rebeccapurple;
+        }
+        .sticky{
+            position: sticky;
+            top: 10px;
+            left: 10px;
+            height: 100px;
+            width: 100px;
+            background-color: rebeccapurple;
+        }
+        
+    </style>
+    <title>Wrap Image with Text</title>
+</head>
+
+<body>
+    <div class="img-wrap">
+        <h3>Image wrap using float</h3>
+        <img src="https://via.placeholder.com/200" alt="Example Image">
+
+        <p>
+            This is some text that will wrap around the image. The `float` property allows the image to float to the
+            side, and the text will automatically wrap around the image. You can add as much content as you need here.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis repellendus sint dolorum quibusdam
+            itaque ad voluptatibus, dolorem deleniti odio labore, voluptatum beatae eius necessitatibus aliquam maxime
+            ipsum impedit iure totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio exercitationem
+            consequuntur necessitatibus autem repudiandae minima itaque quia excepturi, sunt rem, provident minus
+            eveniet magni harum, velit nihil quas inventore explicabo.
+        </p>
+    </div>
+    <div class="float-clear">
+        <h3>Float clear property</h3>
+        <div class="header">
+            header
+        </div>
+        <section class="big-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae tenetur dolorum voluptatibus dolorem aspernatur sit, minus temporibus dolore id alias odio pariatur molestiae aliquam! Voluptatibus cumque repellendus quidem magni reprehenderit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi nam sunt minus ipsum et nostrum debitis tempora consequatur impedit recusandae, repellat aperiam quod, voluptatum blanditiis ea unde ex, saepe ullam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel iusto aperiam modi tempore in sunt saepe repellat cumque aliquid deserunt autem itaque iste, ratione quisquam? Nulla impedit quas voluptatem repellat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias excepturi nulla omnis delectus mollitia illo dolores ullam repellendus rem blanditiis error sed, qui quidem tempora vero nam cum. Saepe, temporibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos pariatur, voluptas deserunt praesentium, aperiam rem aliquid eligendi esse illo natus recusandae accusamus dolor a quis voluptatibus doloribus possimus debitis sunt.</section>
+        <section>2</section>
+        <section class="max-height-box">3</section>
+        <div class="footer">
+            footer
+        </div>
+    </div>
+    <div class="positions">
+        <h3>Positions :</h3>
+        <div class="sticky">
+            Sticky
+        </div>
+        <p>Relative</p>
+        <div class="relative">
+            <div class="box1">1</div>
+            <div class="box2">2</div>
+            <div class="box3">3</div>
+        </div>
+        <p>Absolute</p>
+        <div class="absolute">
+            <div class="box1">1</div>
+            <div class="box2">2</div>
+            <div class="box3">3</div>
+        </div>
+        <div class="fixed">
+
+        </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

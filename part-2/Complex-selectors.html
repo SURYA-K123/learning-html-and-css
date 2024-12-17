@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>complex-selectors</title>
+</head>
+<style>
+    .sibling-selectors h6~p {
+        color: green;
+    }
+
+    .sibling-selectors h6+p {
+        color: blue;
+    }
+
+    a {
+        display: block;
+    }
+
+    a[target] {
+        text-decoration: none;
+        color: green;
+    }
+
+    a[href="./logout.php"] {
+        text-decoration: none;
+        color: blue;
+    }
+
+    a[href*=".html"] {
+        text-decoration: none;
+        color: red;
+    }
+
+    a[href^="https"] {
+        text-decoration: none;
+        color: rgb(255, 0, 238);
+    }
+
+    a[href$=".in"] {
+        text-decoration: none;
+        color: green;
+    }
+
+    a[rel~="link"] {
+        text-decoration: none;
+        color: blue;
+    }
+
+    a[rel|="en"] {
+        text-decoration: none;
+        color: red;
+    }
+
+    .pseudo-classes a:link {
+        text-decoration: none;
+        color: black;
+    }
+
+    .pseudo-classes a:visited {
+        text-decoration: none;
+        color: rgb(0, 255, 47);
+    }
+
+    .pseudo-classes a:active {
+        text-decoration: none;
+        color: orange;
+    }
+
+    .pseudo-classes a:hover {
+        text-decoration: none;
+        color: rgb(255, 251, 0);
+    }
+
+    input[type="text"]:focus {
+        width: 300px;
+    }
+
+    input[type="checkbox"]:checked {
+        height: 50px;
+        width: 50px;
+    }
+
+    input[type="checkbox"]:indeterminate {
+        background-color: yellow;
+    }
+
+    li {
+        font-weight: bold;
+    }
+
+    li:first-child {
+        color: rgb(13, 255, 0);
+    }
+
+    li:last-child {
+        color: rgb(4, 0, 255);
+    }
+
+    p:only-child {
+        color: rgb(251, 0, 255);
+    }
+
+    h4:first-of-type {
+        color: brown;
+    }
+
+    h4:last-of-type {
+        color: rgb(4, 0, 255);
+    }
+
+    q:only-of-type {
+        color: rgb(236, 152, 49);
+    }
+
+    /* ol li:nth-child(2n){
+        background-color: red;
+    } */
+
+    ol li:nth-of-type(2n) {
+        background-color: red;
+    }
+
+    .sibling-selectors:target {
+        background-color: green;
+    }
+
+    .empty-pseudoclass div:empty {
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+        background-color: blueviolet;
+    }
+
+    .negation-pseudoclass div:not(.negation) {
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+        background-color: blueviolet;
+    }
+
+    .textual-pseudo-elements::first-letter {
+        color: rgb(255, 48, 48);
+    }
+    .textual-pseudo-elements::first-line {
+        color: rgb(255, 0, 195);
+    }
+    .gen-content{
+        position: relative;
+        height: 50px;
+        width: 300px;
+        background-color: lightgreen;
+        text-align: center;
+    }
+    .gen-content::before{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 3px;
+        left: 0;
+        background-color: green;
+    }
+</style>
+
+<body>
+    <div class="sibling-selectors" id="top">
+        <h3>Sibling selectors</h3>
+        <p>This is the first paragraph</p>
+        <h6>First heading</h6>
+        <p>This is the second paragraph</p>
+        <p>This is the third paragraph</p>
+    </div>
+    <div class="attribute-selectors">
+        <h3>Attribute based selectors</h3>
+        <a href="./login.php" target="_blank">Attribute target present selector</a>
+        <a href="./logout.php">Attribute value equals selector</a>
+        <a href="./index.html">contains selector</a>
+        <a href="https://www.google.com">Starts with selectors</a>
+        <a href="https://www.google.in">Ends with selectors</a>
+        <a href="#" rel="tag link">Spaced selectors</a>
+        <a href="#" rel="en-US">Hyphen separated selectors</a>
+    </div>
+    <div class="pseudo-classes">
+        <h3>Pseudo Classes</h3>
+        <a href="https://www.youtube.com" target="_blank">link and visited</a>
+        <a href="./logout.php">link and visited</a>
+        <input type="text" name="text" required><br>
+        <input type="checkbox" name="day" id="sat">sat
+        <input type="checkbox" name="day" id="sun">sun
+    </div>
+    <div class="structural-position-pseudo-classes">
+        <h3>Structural and position pseudo classes</h3>
+        <div class="div">
+            <p>Hello</p>
+        </div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet est distinctio corporis porro cupiditate
+                minima culpa veritatis. Harum in quibusdam voluptatem, quaerat, consequatur deserunt minima ducimus
+                excepturi placeat pariatur nisi.</p>
+            <h4>Hi</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex id, quisquam quam optio ea tempora
+                voluptatum sint vitae voluptatibus voluptatem natus facilis, eaque dolorum soluta, ratione culpa neque
+                recusandae. Et?</p>
+            <h4>Hello</h4>
+            <q>The world is mine</q>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolorum, cum nemo, mollitia similique
+                consectetur facilis libero vero ab accusamus animi enim ducimus iusto sit aliquid accusantium repellat
+                fugiat quaerat!</p>
+        </div>
+    </div>
+    <div class="nth-pseudoclass">
+        <h3>nth-pseudoclass</h3>
+        <ol>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ol>
+    </div>
+    <div class="target-pseudoclass">
+        <h3>Target Pseudo class</h3>
+        <a href="#top">Go to top</a>
+    </div>
+    <div class="empty-pseudoclass">
+        <h3>Empty Pseudo class</h3>
+        <div><!--hello--></div>
+        <div></div>
+    </div>
+    <div class="negation-pseudoclass">
+        <h3>Negation Pseudo class</h3>
+        <div class="negation"><!--hello--></div>
+        <div></div>
+    </div>
+    <hr>
+    <div class="pseudo-elements">
+        <!-- <h1>Pseudo Elements</h1> -->
+        <div class="textual-pseudo-elements">
+            <h3>Textual pseudo elements</h3>
+            <div class="first-letter">
+                <p>Hello</p>
+            </div>
+        </div>
+        <div class="generated-content-pseudo-element">
+            <h3>Generated content pseudo element</h3>
+            <div class="gen-content">
+                Hello
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

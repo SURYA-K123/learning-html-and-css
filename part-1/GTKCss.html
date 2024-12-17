@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .borders {
+        height: 300px;
+        width: 300px;
+        background-color: rgb(232, 120, 120);
+        border-width: 5px 8px 11px 15px;
+        border-style: solid dashed dotted double;
+        border-color: green greenyellow grey goldenrod;
+    }
+
+    .multi-class .btn {
+        outline: none;
+        border: none;
+        height: 30px;
+        width: 70px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn-danger {
+        background-color: red;
+    }
+
+    .btn-primary {
+        background-color: blue;
+    }
+
+    .hexa {
+        color: #b83333;
+    }
+
+    .rgb {
+        color: rgb(232, 120, 120);
+    }
+
+    .hsl {
+        color: hsl(96, 59%, 44%);
+    }
+</style>
+
+<body>
+    <div class="borders">
+        <h1>Borders</h1>
+        Hello
+    </div>
+    <div class="multi-class">
+        <h1>Multiclasses</h1>
+        <button type="submit" class="btn btn-danger">Submit</button>
+        <button type="reset" class="btn btn-primary">Reset</button>
+    </div>
+    <div class="colour">
+        <h1>Colour</h1>
+        <p class="hexa">Hello</p>
+        <p class="rgb">Hi</p>
+        <p class="hsl">Bye</p>
+    </div>
+    <div class="length">
+        <h1>Lengths</h1>
+        <div class="pixel"></div>
+        <div class="em"></div>
+        <div class="rem"></div>
+        <surya style="height: 100px; width: 100px; background-color: red; display: block">ABC</surya>
+    </div>
+    <script>
+        var newtag = document.getElementsByTagName("surya");
+        console.log(newtag);
+    </script>
+</body>
+
+</html>

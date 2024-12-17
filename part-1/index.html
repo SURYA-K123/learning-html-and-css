@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="./index.js"></script>
+</head>
+<style>
+    .logo{
+        position: relative;
+        padding: 10px;
+    }
+    div {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        border-radius: 15px;
+    }
+
+    .red {
+        border: 8px solid red;
+        transform: rotateZ(-15deg);
+        left: 0;
+    }
+
+    .green {
+        border: 8px solid rgb(0, 143, 0);
+        transform: rotateZ(25deg);
+        left: 100px;
+    }
+
+    .blue {
+        border: 8px solid blue;
+        transform: rotateZ(-15deg);
+        left: 200px;
+    }
+
+    .yellow {
+        border: 8px solid rgb(255, 208, 1);
+        left: 300px;
+    }
+</style>
+
+<body>
+    <div class="logo">
+        <div class="red"></div>
+        <div class="green"></div>
+        <div class="blue"></div>
+        <div class="yellow"></div>
+    </div>
+</body>
+
+</html>

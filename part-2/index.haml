@@ -1,0 +1,53 @@
+!!! 5
+%html
+  %head
+    %link{:rel=>"stylesheet", :href=>"index.css"}
+  :sass
+    .container
+      margin: 0 auto
+      width: 960px
+  %body
+    %header
+      This is haml
+    %section
+      %p
+        This is the section tag
+      %img.image#image(src="https://www.google.com/search?q=image&sca_esv=a3b9fa461642e16c&sca_upv=1&rlz=1C5CHFA_enIN1126IN1126&udm=2&source=iu&ictx=1&vet=1&fir=Q53WJiavu6IJtM%252C0JWe7yDOKrVFAM%252C%252Fm%252F0jg24%253BtYmxDgFq4MrkJM%252C-t22bY2ix3gHaM%252C_%253B2brKLR3s5kTpPM%252CExDvm63D_wCvSM%252C_%253BsKMM4eBjWSQEBM%252CB51x0PBR9KNzvM%252C_%253B6OMR-fPNJnYtoM%252CYAe2I9AqIHgndM%252C_&usg=AI4_-kSdgG1sfcIG30XrD7nZRY7rXAij_A&sa=X&ved=2ahUKEwiJ8aumltOIAxU2yDgGHVUfAKQQ_B16BAg3EAE#vhid=Q53WJiavu6IJtM&vssid=mosaic" alt="shayhowe")
+
+      .container#container1(role = "region")
+        This is the id and class demo with attributes
+
+      %h3
+        input with boolean demo
+      %input{:type=>"checkbox", :checked=>true}
+    %p
+      Shay is
+      %a{:href => "#"} awesome
+      \.
+    %h3
+      comments
+    .comments
+      / Comment line
+      %p
+        This is the line below comment
+      / 
+        %div
+          Commented div content
+      /[if lt IE 9]
+        %script{:src  => "html5shiv.js"}
+
+    .silent-comment
+      -#This is a haml specific comment or silent comment
+      %div  
+        Hello
+    -if @student
+      %div{:class => "student-#{@student.name}"}
+    
+
+    %div 
+      %p Hello
+
+    :javascript
+      $('button').on('click', function(event) {
+        $('p').hide('slow');
+      });

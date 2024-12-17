@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        height: 200vh;
+    }
+
+    .output {
+        height: 300px;
+        width: 100%;
+        overflow: auto;
+    }
+</style>
+
+<body>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat architecto ipsam eaque reiciendis ullam libero
+        laboriosam blanditiis expedita excepturi</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eos eius cumque quae, quibusdam delectus, animi
+        omnis </p>
+    <div class="output">
+
+    </div>
+    <div class="div" style="padding: 50px;background-color: rgba(255, 0, 0, 0.2);text-align: center; cursor: pointer;">
+        DIV 2
+        <div class="div">DIV 1</div>
+    </div>
+
+    <h3>Form events</h3>
+    <input type="text" id="name">
+
+    <p id="p">Hello <b>world</b></p>
+    <p>hi</p>
+
+    <button id="fb">firstbutton</button>
+
+    <a href="https://www.google.com">Go to google</a>
+    <button id="off">off</button>
+    <button id="proxy">proxy</button>
+    <button id="trigger">trigger</button>
+    <button id="event">event</button>
+    <button id="unbind">unbind</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./event.js"></script>
+</body>
+
+</html>

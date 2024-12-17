@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .display{
+        background-color: aquamarine;
+    }
+    .display-box{
+        display: inline-block;
+        height: 200px;
+        width: 200px;
+        background-color: rgb(240, 117, 117);
+    }
+    .box-model-box{
+        box-sizing: border-box; /* padding-box not suggested by chrome */
+        padding: 10px;
+        margin: 10px;
+        border: 10px solid blue;
+        height: 200px;
+        width: 200px;
+        border-radius: 5px;
+        background-color: rgb(141, 71, 211);    }
+</style>
+<body>
+    <div class="display">
+        <h1>Display</h1>
+        <div class="display-box">
+            Hello All
+        </div>
+        <span>Hi</span>
+    </div>
+    <div class="box-model">
+        <h1>Box Model</h1>
+        <div class="box-model-box"></div>
+    </div>
+</body>
+</html>

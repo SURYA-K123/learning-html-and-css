@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error tolerance</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .top{
+        position: fixed;
+        top: 0;
+        height: 45px;
+        width: 100%;
+        background-color: blue;
+    }
+    .left{
+        position: fixed;
+        top: 45px;
+        left: 0;
+        width: 80px;
+        height: calc(100% - 90px);
+        background-color: red;
+    }
+    .right{
+        position: fixed;
+        top: 45px;
+        right: 0;
+        width: 45px;
+        height: calc(100% - 90px);
+        background-color: yellow;
+    }
+    .container{
+        width: calc(100% - 125px);
+        height: calc(100% - 90px);
+        position: fixed;
+        left: 80px;
+        top: 45px;
+        background-color: green;
+    }
+</style>
+<body>
+    <div class="top"></div>
+    <div class="left"></div>
+    <div class="container"></div>
+    <div class="right"></div>
+    <div class="bottom"></div>
+</body>
+
+</html>

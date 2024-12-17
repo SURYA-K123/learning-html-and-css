@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+</head>
+<style>
+    .flexible-grid{
+        padding: 10px;
+        background-color: rgb(187, 187, 187);
+    }
+    section{
+        height: 100px;
+        width: 30%;
+        float: left;
+        background-color: rgb(41, 255, 66);
+    }
+    aside{
+        height: 100px;
+        width: 60%;
+        float: right;
+        background-color: rgb(41, 255, 66);
+    }
+    .flexible-grid::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+</style>
+<body>
+    <div class="flexible-grid">
+        <h3>Flexible Grid</h3>
+        <section></section>
+        <aside></aside>
+    </div>
+</body>
+</html>

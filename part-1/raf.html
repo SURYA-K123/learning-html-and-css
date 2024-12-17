@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append Boxes One by One</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            pointer-events: none; /* Boxes don't interfere with mouse events */
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        let boxCount = 0; // To count the number of boxes added
+        let lastTime = 0; // To track the time of the last box creation
+        const delay = 1000; // Delay in milliseconds between box creations (1 second)
+
+        // Function to create a box at a random position
+        function createBox() {
+            const box = document.createElement('div');
+            box.className = 'box';
+            // Set a random position within the viewport
+            box.style.left = `${Math.random() * (window.innerWidth - 50)}px`; // Random left position
+            box.style.top = `${Math.random() * (window.innerHeight - 50)}px`; // Random top position
+            document.body.appendChild(box); // Append the box to the body
+            boxCount++;
+            console.log(`Boxes created: ${boxCount}`); // Log the count
+        }
+
+        // Use requestAnimationFrame to control box creation
+        function animate(timestamp) {
+            if (document.hidden) {
+                // If the tab is not visible, do not create new boxes
+                requestAnimationFrame(animate);
+                return;
+            }
+
+            // Create boxes with a delay
+            if (timestamp - lastTime > delay) {
+                createBox(); // Create a box
+                lastTime = timestamp; // Update lastTime to the current timestamp
+            }
+
+            requestAnimationFrame(animate); // Request the next animation frame
+        }
+
+        // Start the animation
+        requestAnimationFrame(animate);
+    </script>
+</body>
+</html>
